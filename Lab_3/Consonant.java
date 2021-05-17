@@ -1,37 +1,30 @@
 import java.util.*;
-public class AbsoluteDiff {
+public class Consonant {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner sc=new Scanner(System.in);
-		System.out.println("Enter a number");
-		int n=sc.nextInt();
-		int res=modifyNumber(n);
-		System.out.println(res);
+		System.out.println("Enter a string");
+		String s=sc.next();
+		String str=alterString(s.toCharArray());
+		System.out.println(str);
 		sc.close();
 	}
-	static int modifyNumber(int n)
+	static String alterString(char[] st)
 	{
-		int r,d=0;
-		String s=Integer.toString(n);
-		StringBuffer sbf=new StringBuffer();
-		StringBuffer str = null;String st;
-		for(int i=1;i<s.length();i++)
+		for(int i=0;i<st.length;i++)
 		{
-			d=(int)(s.charAt(i))-(int)(s.charAt(i-1));
-			if(d<0)
+			
+			if((st[i]=='a')||(st[i]=='e')||(st[i]=='i')||(st[i]=='o')||(st[i]=='u'))
 			{
-				d=d*(-1);
+				continue;
 			}
-			str=sbf.append(d);
-
-			if(i==s.length()-1)
+			else
 			{
-				str=sbf.append(s.charAt(i));
+				int r=(int)st[i];
+				st[i]=(char)(r+1);
 			}
 		}
-		st=str.toString();
-		r=Integer.valueOf(st);
-		return r;
+		return String.valueOf(st);
 	}
 }

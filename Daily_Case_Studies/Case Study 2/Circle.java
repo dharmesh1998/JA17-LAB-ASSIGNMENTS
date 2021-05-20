@@ -25,7 +25,7 @@ public class Circle extends Shape{
 	public String toString() {
 		Shape s=new Shape();
 		Scanner sc=new Scanner(System.in);
-		System.out.println("Enter the color with which you want to fill : ");
+		System.out.println("Enter the color  ");
 		s.color=sc.next();
 		if(s.color!=null)
 			s.filled=true;

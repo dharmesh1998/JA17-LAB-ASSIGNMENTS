@@ -15,16 +15,16 @@ public class GetSquares {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Scanner sm=new Scanner(System.in);
+		Scanner sc=new Scanner(System.in);
 		System.out.print("Enter the size of the array : ");
-		int size=sm.nextInt();
+		int size=sc.nextInt();
 		if(size<1)
 			System.out.println("Cannot Proceed...Size should be 1 or more.");
 		else {
 			int array[]=new int[size];
 			for(int i=0;i<size;i++) {
 				System.out.print("Enter Element No."+(i+1)+" : ");
-				array[i]=sm.nextInt();
+				array[i]=sc.nextInt();
 			}
 			Map<Integer,Integer> map=getSquares(array);
 			System.out.print("The numbers along with their squares are given below :\n");
@@ -32,7 +32,7 @@ public class GetSquares {
 				System.out.println("Number : "+m.getKey()+", Square of "+m.getKey()+" : "+m.getValue());
 			}
 		}
-		sm.close();
+		sc.close();
 
 	}
 
